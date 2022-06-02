@@ -1,0 +1,172 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+.mainLoginInput{
+  color: slategrey;
+  height: 25px;
+  padding: 0px;
+  font-size: 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.mainLoginInput::-webkit-input-placeholder { 
+  font-family: FontAwesome;
+  overflow: visible;
+  vertical-align: top;
+  display: inline-block !important;
+  padding-left: 5px;
+  padding-top: 2px;
+  }
+ 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #BDEFF8;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper {
+  background-color: #EAEDEE;
+  min-width: 650px;
+  min-height: 650px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 3px 6px 40px #000;
+  margin-bottom: 10px;
+}
+
+.list-item {
+  width: 140px;
+  border: none;
+  color:#000;
+  font-size: 15px;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+.list {
+  display: flex;
+  margin: 5px 0;
+  padding: 1px;
+  min-height: 5px;
+}
+
+.register{
+  border: 1px solid slategray;
+  border-radius: 8px
+}
+
+.button-edit,
+.button-delete {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.button-edit {
+  color: #e2d029;
+  margin-right: 15px;
+}
+
+.button-delete {
+  color: lightblue;
+  margin-right: 15px;
+}
+
+.img {
+  width: 130px;
+  height: 70px;
+}
+
+.divTableRow {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9DADA;
+  border-radius: 8px;
+}
+
+.divTableRow1 {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.title {
+  padding: 5px 80px;
+  text-align: left;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+}
+
+.label{
+  width: 10px;
+  height: 10px;
+  border: 1px solid dimgray;
+  text-align: center;
+}
+
+.divTableCell1 {
+	display: table-cell;
+	padding: 5px 10px;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divTableCell {
+	display: table-cell;
+	padding: 5px 10px;
+}
+
+.divTableCellCount {
+	display: table-cell;
+  margin-left: 280px;
+  width: 20px;
+  text-align: center;
+  border-radius: 5px;
+  background-color:#3A80FA;
+}
+
+.select{
+  width: 165px;
+}
+
+.buttonreg{
+  width: 130px;
+}
+
+.search{
+  padding: 3px 10px;
+}
+
+.completeGasto {
+  background-color: #F16767;
+  border-radius: 15px;
+  height: 25px;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.completeIngreso {
+  background-color: #5DC648;
+  border-radius: 15px;
+  text-align: center;
+  margin-right: 50px;
+  height: 25px;
+}
