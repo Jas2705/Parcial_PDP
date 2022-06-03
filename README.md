@@ -1,3 +1,12 @@
+# Before running
+
+Please run the next commands
+
+npm install --save react-modal
+npm install --save react-bootstrap
+npm install bootstrap --save
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
