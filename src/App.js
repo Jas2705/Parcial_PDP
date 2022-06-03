@@ -10,6 +10,7 @@ function App() {
   const [inputName, setInputName] = useState("");
   const [inputQuantity, setInputQuantity] = useState("");
   const [todos, setTodos] = useState([]);
+  const [todosOriginal, setTodosOriginal] = useState([]);
   const [edit, setEdit] = useState(null);
   const [count, setCount] = useState(0);
   const [countFinal, setCountFinal] = useState(100000)
@@ -20,8 +21,8 @@ function App() {
       <div className="app-wrapper">
         <div>
           <Header 
-          countFinal = {countFinal}
-          countInitial = {countInitial}
+          countFinal = {parseFloat(countFinal, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")}
+          countInitial = {parseFloat(countInitial, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")}
           />
         </div>
         <div>
@@ -31,6 +32,7 @@ function App() {
               inputName={inputName} setInputName ={setInputName }
               inputQuantity={inputQuantity} setInputQuantity={setInputQuantity}
               todos={todos} setTodos={setTodos}
+              todosOriginal={todosOriginal} setTodosOriginal={setTodosOriginal}
               edit={edit}
               setEdit={setEdit}
               count={count}
@@ -42,9 +44,13 @@ function App() {
             <div className="divTableCell"><FormListMov 
               todos={todos} 
               setTodos={setTodos}
+              todosOriginal={todosOriginal} 
+              setTodosOriginal={setTodosOriginal}
               setEdit={setEdit}
               count={count}
               setCount={setCount}
+              countFinal={countFinal}
+              setCountFinal={setCountFinal}
             /></div>
           </div>
         </div>

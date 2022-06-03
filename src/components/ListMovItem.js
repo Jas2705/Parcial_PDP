@@ -3,10 +3,13 @@ import React from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 
 const ListMovItem = (props) => {
-
   const handlerDelete=()=>{
     props.deleteTodo(props.todo)
-    props.setCount(props.count-1)
+    if(props.todo.typeMov === "ingreso"){
+      props.setCountFinal(parseInt(props.countFinal) - parseInt(props.todo.quantity))
+    }else{
+      props.setCountFinal(parseInt(props.countFinal) + parseInt(props.todo.quantity))
+    }
   }
 
   const handlerEdit =() => {
@@ -19,7 +22,10 @@ const ListMovItem = (props) => {
             {props.todo.name}
         </div>
         <div className={`list-item ${props.todo.typeMov === 'gasto' ? "completeGasto" : "completeIngreso"}`}>
-            {props.todo.quantity}
+            {parseFloat(props.todo.quantity, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")}
+        </div>
+        <div className='list-item' hidden>
+            {props.todo.typeMov}
         </div>
         <div>
             <button className='button-edit' onClick={handlerEdit}><FaEdit /></button>
